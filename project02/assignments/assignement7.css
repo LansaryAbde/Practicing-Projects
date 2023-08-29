@@ -1,0 +1,28 @@
+p {
+  background-color: lightgray;
+  margin: 2rem auto;
+  width: 500px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  position: relative;
+  counter-increment: countup;
+}
+p::before {
+  content: counter(countup);
+  position: absolute;
+  left: -60px;
+  top: 0px;
+  background-color: red;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+p::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: red;
+  height: 60px;
+  width: 7px;
+}

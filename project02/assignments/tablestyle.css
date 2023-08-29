@@ -1,0 +1,25 @@
+body{
+    width: 50vw;
+    margin: 2rem auto;
+    box-sizing: border-box;
+}
+table{
+    width: 100%;
+    text-align: center;
+    border-spacing: 3px;
+}
+th, td {
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    font-weight: 200;
+    background-color: beige;
+    border: 2px solid #333;
+}
+th{
+    background-color: gold;
+    border-radius: 10px 10px 0 0;
+}
+.tfoot{
+    border-radius: 0 0 10px 10px ;
+}

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div[class="main red"] {
+  color: red;
+}
+/* assignement 2 */
+.child:nth-child(2) {
+  color: red;
+}
+/* assignement 3 */
+div[class*="baby"]:only-child {
+  color: red;
+}
+/* assigenement 4 */
+div[title]:not([class], :last-of-type, :nth-last-of-type(3)) {
+  color: red;
+}
+/* assignement 5 */
+div:nth-child(2)[title]:last-child:not(.no-need > [title]) {
+  color: red;
+}
+/* assignement 6 */
+div:not([class]) div:nth-last-of-type(2) {
+  color: red;
+}
+/* assignement 7 */
+h3 > div:first-child div:nth-of-type(2) {
+  color: red;
+}
+/* assignement 8 */
+div *:not(:first-child , :last-child , h3){
+    color: red;
+}

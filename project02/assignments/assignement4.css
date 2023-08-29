@@ -1,0 +1,30 @@
+body {
+  width: 50%;
+  margin: 3rem auto;
+  font-size: 1.5rem;
+}
+.big {
+  width: 400px;
+  margin: 0 auto;
+  list-style: none;
+}
+li {
+  background-color: #FFF;
+  margin: 7px;
+}
+.html,
+.css,
+.js {
+  background-color: lightgray;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  list-style-position: outside;
+}
+.css li{
+    list-style-type:upper-roman;
+}
+.js li{
+    margin-left: -2rem;
+    list-style-position: inside;
+}
+

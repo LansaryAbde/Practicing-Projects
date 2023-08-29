@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.first {
+  width: 150px;
+  height: 100px;
+  margin: 5rem auto;
+  background-color: orange;
+  color: #eee;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.first:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+  z-index: -1;
+  transform: skew(15deg, 15deg);
+}
+.first::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+  z-index: -1;
+  transform: skew(-15deg, -15deg);
+}
+/* 2nd assignement */
+.secound {
+  width: 150px;
+  height: 100px;
+  margin: 3rem auto;
+  background-color: green;
+  color: #eee;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* transform: matrix(3, 0.2679, 0, 3, 20, 100); */
+}
+.secound::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  width: 30%;
+  height: 100%;
+  background-color: green;
+  transform: skewX(20deg);
+  z-index: -1;
+}
+.secound::after {
+  content: "";
+  position: absolute;
+  left: -40px;
+  width: 10%;
+  height: 100%;
+  background-color: green;
+  transform: skewX(20deg);
+  z-index: -1;
+}
+/* 3rd assignement */
+.third {
+  width: 200px;
+  height: 200px;
+  margin: 10rem auto;
+  background-color: rgb(70, 113, 128);
+  position: relative;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  position: relative;
+}
+.third::before {
+  content: "";
+  width: 138px;
+  height: 138px;
+  top: -70px;
+  left: 29px;
+  position: absolute;
+  background-color: black;
+  transform: rotate(45deg);
+  border-right: 4px solid white;
+  border-bottom: 4px solid white;
+}
+.third::after{
+content: "Elzero";
+font-family: sans-serif;
+position: absolute;
+bottom: 5px;
+left: 5px;
+color: #fff;
+}
+/*4th assignement part 1*/
+.cont{
+    width: 200px;
+    height: 200px;
+    margin: 4rem auto;
+    position: relative;
+    transform-style: preserve-3d; /* to make items in 3d level */
+    transition: transform 1s;
+}
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;/* to hide the back side of items */
+}
+.front{
+    background-color: red;
+    
+}
+.back{
+    background-color: blue;
+    transform: rotateY(180deg); /* so u can see the back side */
+      
+}
+.cont:hover {
+    transform: rotateY(180deg);
+}
+ /* 3rd assignement part2 */
+
+.father{
+    width: 200px;
+    height: 200px;
+    margin: 2rem auto;
+    position: relative;
+    transform-style: preserve-3d; /* make sure to wrap up items inside a container */
+    transition: transform 1s;
+}
+.fronto , .backo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    font-size: 2rem;
+    backface-visibility: hidden; /* !important to hide that ugly backface */
+    
+}
+.fronto{
+    background-color: red;
+}
+.backo{
+    background-color: blue;
+    transform: rotateX(180deg); /* !important to make sure that back face behind flips so u can see it */
+}
+.father:hover{
+    transform: rotateX(-180deg);
+}

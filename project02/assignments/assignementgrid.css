@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* .grid {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 10% 1fr;
+  gap: 20px;
+}
+.grid div {
+  background-color: darkcyan;
+  color: #eee;
+  font-size: 1.2rem;
+  position: relative;
+  counter-increment: count-up;
+}
+.grid div::before {
+  content: "Element " counter(count-up);
+  position: absolute;
+  color: #eee;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+} */
+/* assignemnet 2 */
+/* .layout {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+
+  grid-template-areas:
+    "head head head head head head"
+    "sec sec sec sec side side"
+    "foot foot foot foot foot foot";
+}
+.layout header {
+  grid-area: head;
+  background-color: blue;
+  height: 10vh;
+  color: #eee;
+  position: relative;
+}
+.layout section {
+  grid-area: sec;
+  background-color: red;
+  color: #eee;
+  height: 80vh;
+  position: relative;
+}
+.layout aside {
+  grid-area: side;
+  background-color: gray;
+  color: #eee;
+  height: 80vh;
+  position: relative;
+}
+.layout footer {
+  grid-area: foot;
+  background-color: green;
+  color: #eee;
+  height: 10vh;
+  position: relative;
+}
+.layout header::before {
+  content: "header";
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(0, -50%);
+}
+.layout section::before {
+  content: "section";
+  position: absolute;
+  top: 3%;
+  left: 20px;
+}
+.layout aside::before {
+  content: "aside";
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  
+}
+.layout footer::before {
+  content: "footer";
+  position: absolute;
+  top: 50%;
+  left: 3%;
+ transform: translate(0, -50%);
+} */
+/* assignement 3 */
+/* .grido {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 10px 1fr 1fr 10px;
+    grid-template-rows: 1fr 20px;
+    gap: 20px;
+  }
+  .grido div{
+    background-color: black;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  } */
+/* assignement 4 */
+.grid4 {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: repeat(6, 1fr);
+  gap: 20px;
+}
+.grid4 div {
+  background-color: rgb(63, 124, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+  font-weight: bold;
+}
+.one {
+  grid-column: 1 / 4;
+  order: 6;
+}
+.two {
+  grid-column: 1 / 3;
+  order: -4;
+}
+.three {
+  order: -3;
+}
+.four {
+  order: -1;
+  grid-column: 1 / 2;
+}
+.five {
+  grid-column: 2 / 4;
+  grid-row: 3 / 6;
+}
+.six {
+  grid-column: 1 / 2;
+}
+.seven {
+  grid-column: 1 / 2;
+}
+.eight {
+  grid-column: 1 / 4;
+  order: -5;
+}
+/* asiignement 5 */
+.grid5 {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 300px 20px
+}
+.grid5 div{
+    background-color: darkred;
+    color: #ddd;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
