@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  border-top: #1899a7 solid 0.4rem;
+}
+div {
+  width: 34rem;
+  margin: 0 auto;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+header {
+  background-color: rgba(158, 148, 148, 0.146);
+  margin-bottom: 3rem;
+  padding: 1em;
+  color: #1899a7;
+}
+header ul li {
+  display: inline-block;
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-indent: 1rem;
+}
+p {
+  text-align: justify;
+  line-height: 1.5rem;
+  text-align: justify;
+}
+
+sup {
+  position: absolute;
+  background-color: rgb(241, 241, 0);
+  font-size: 0.7rem;
+  color: #000;
+  padding: 4px 8px;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: #1899a7;
+}
+.small {
+  font-size: 0.7rem;
+}
+a {
+  color: #1899a7;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover {
+  color: orangered;
+  font-weight: 700;
+  text-decoration: underline;
+}
+a:active {
+  background-color: #000;
+}
+.down {
+  font-size: 0.8rem;
+  width: 60%;
+  padding: 1.9rem;
+  background-color: rgba(158, 148, 148, 0.146);
+  border-top: solid #1899a7 0.2rem;
+  border-bottom: solid #1899a7 0.2rem;
+  margin-left: 0;
+}
+h4 {
+  text-align: center;
+}
+button {
+  position: absolute;
+  right: 30px;
+  bottom: 45px;
+  width: 5rem;
+  height: 3rem;
+  cursor: pointer;
+}
+footer {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+h1 {
+  position: relative;
+}
+body {
+  position: relative;
+}
+ol li {
+  line-height: 1.5rem;
+  font-size: 0.85rem;
+  text-indent: 2rem;
+  list-style-position: inside;
+}
+ul li {
+  line-height: 1.3rem;
+  font-size: 0.85rem;
+  text-indent: 1rem;
+  list-style-position: inside;
+}
+.down h4 {
+  color: #000;
+}
