@@ -1,0 +1,134 @@
+# VSCode Git :
+||set the working place
+1- git clone (url of ur remote repo in ur github) : so u can make that directory as ur main (working place)
+cd <directory's name> (open a folder as simple as that usind git in VS Code)
+
+------------
+Adding files and deal with changes:
+2- git add <that file or those files (or * or . ) for evething> (move files from working place to satging area)
+3- git commit -m "describe what thos files are about" (move files to the local repo)
+4- git push origin (main, master, any other branches u made) (push changes to the remote repo)
+git status (u can always check what happens in any step or u can just see it on VSCode U:untracked A:added M:modified...)
+git reset <file u wdon't wanna be added> (a useful tool if u wanna undo changes)
+git restore --staged <the file u wanna get back after adding it>
+git commit -a -m "message" (= git add + git commit -m "")
+touch <newfile> (create a new file)
+git clean -n (gonna tell u wich files are u are about to remove)
+git clean -f (it will remove anything that deosn't added yet by git add)
+rm -fr <file or directory u wanna remove by force>
+echo "here is content" > file.txt (u can create anything inside a new file + create that new file in the same time)
+code <file> (to open a file with VSCode)
+______________________
+ignore files :
+create  a new file named (.gitignore) and u can add any extentions u wanna ignore(*.log .. u can make some exceptions by typing !thatexception file.log) or any specific files (file.txt)
+1- touch .gitignore 
+2- code .gitignore
+______________________
+head and log :
+git log : to see what logs u have (the last is the one u are working on)
+git log --oneline (makes logs' informations and makes shorter)
+______________________
+branches : (each branch has his own files unless u merge between them)
+git branch list (see the list of ur brachnes)
+git branch <newbranchname> (create a new branch)
+git checkout main or <newbranch> (switch to the target branch)
+git checkout -b <new branch that u will xreate and open et the same time>
+git branch -m <name of the old branch> <new name> (this is how u rename a branch)
+git branch -D <name of the branch u wanna delete> (ce sure that u aren't in the same branch that uwanna remove)
+git merge <that branch u wanna marge with the branch u are on right now> (be sure that in the branch u wanna stay after merging, type git merge <branch that gonna be merged and disappear>) {ALWAYS MERGE AFTER U DID COMMIT}
+--> if u try to merge two branches with THE SAME LINE CHANGED CODE it will be conflict. at this point u can choose which change u wanna be applied with VSCode, and u have to git add changes from the bigginning. (use git with VSCode is better in that point)
+git log checkout <id of the log (get it from git log)> (so that's the header u are working on like back in time)
+git reset <log id> (to make the changes unstaged)
+ 
+ ===============================================
+
+#cmder & Git and Github:
+
+git reset head <file u wanna get back after added not commited>
+
+ ----------------
+ Git Config :
+git config --list (or git config -l) (to see qll configurations)
+git init (to make a folder as a working place)
+git config --global init.defaultBranch main (to work in the defaulf branch)
+git config -l --showorigin (to see where u get ur configurations)
+git config --global user.name "change it" (--global to make this config applies on everything)
+git config --global --unset user.name (the opposite)
+git config --global --edit (to mset configs MANUALLY with VSCode)
+
+-----------------
+GitHub puplic key :
+1- ssh-keygen -t rsa -b 4096 -C "example@email.com" (to create ur public key)
+2- they will show ur public key path so press Enter
+3- they will ask u to set a password, and enter it again, or just press Enter to ignore. so u will git another specific path.
+4- cat ~/the specificpath of ur public key (cat ~/.ssh/id_rsa.pub) (cat ~/ command to get access to any file content, so u can get ur key url)
+4- copy ur key url and go to settings > SSH and GPG keys > new key > past it and give it a name and press add.
+5- ssh -T git@github.com (to test ur public key).
+
+------------------
+starting a project from working place :
+1- mkdir <new folder>
+2- cd newfolder/ (to get there)
+3- git init (to link it with ur remote repo so it will probably show this : master > origin)
+4- go to ur github and create a new repo and  copy url ( u can choose between http or ssh if u wanna enter with a public key)
+5- git remote add origin <url to ur github new repo u just created>
+6- git push u- origin master ( -u : to make pull and push in the same time to be update, so u get the lastest files without conflict )
+
+-----------------------
+PUll REQUEST :
+     1- u can fork any project to just COPY it to ue repos list so u can edit it.
+     2- u can commit changes to the master branch, or create a new branch with the new changes, so can delete that branch after u finished.
+     3- go pull request and create a new one and give it a name and description
+     4- if there's no conflict u can continue
+     5- the admin gonna get ur pull request and decide either to merge it with the main branch or not.
+     6- u can delete the fork after u finished ur job.
+
+------------------------
+Aliases
+git config --globsl alias.<newabbriviation> <that command u wanna give it abbr> (git config --global alias.st status)
+git config --blobal alias.<abbr> (to see the origin of that abbr) (if there is any space use quotes "": git config --global alias.cm "commit -m")
+git config --global --edit (u can find aliases there and  edit them manually)
+(search of git alias in google and see what experts use)
+--------------------------
+branches :
+git branch (to see ur branches list)
+git branch <newbranch> (just create a new branch)
+git checkout <the branch u wanna go to> (chnge paths bewtween branches)
+git branch -d <branch u wanna delete> (or : git branch -D <name of branch u wanna delete by FORCE>)
+git branch -b <newbranch> (create a nee branch + open it)
+git branch -m <new name of ur branch> (rename ur branch)
+git merge <the master that gonna be marged+ disappear> (make sure u are in the branch that u wanna stay after merging with)
+push origin <name of the branch> (it's the same with pull)
+--------------------------
+Stash & hide files :
+git stash (to hide ur files , ALWAYS USE IT AFTER GID ADD) [anytime u type this command it will create a new stash]
+git stash save "lasbel ur stash"
+git stash list (to see ur stashes)
+git stash pop (to unhide (drop) ur files + delete the empty stash) [it will always unhide the last stash]
+git stash apply (to unhide ur files without deleting the stash) [again that's gonna apply on the last stash u have created]
+git stash pop stash@{its number} (here u can target a specific stash and pop or apply it by its number, u can get the number frol git stash list)
+git stash drop (to remove the last stash with its filea or u can target one by its number : git stash drop stash@{2})
+git stash show (to show a stash content, and u can target any stash by stash@{its number})
+git stash clear (TO REMOVE ALL THE STASHES)
+
+-----------------------------
+Resetting and head
+ git log (to see the list of ur commits and the head)
+ git reset --hard <id of the commit u wanna back to> (to get back to a previous commit and make it the head . get it from the list : git log) [--hard means force]
+ git push origin <the branch u are working on> --force (to make ur github update with ur local repo)
+ ---------------------------
+ Tagging and releasing 
+ Tags : (it's like a version of ur project)
+ git tag <tag's name> (git tag v1.0)
+ git tag -a <new tag name> -m "message u wanna show"
+ git tag (to see tags list)
+ git tag -l "<name of the version u are looking for>" (search for a certain tag)
+ git push origin <tag name> (to push it to the remote repo, after u added and commited and push ur files already) {DON'T FORGET THIS}
+
+ Relaeses: (it's like the description of ur tag, what's new, fixed bugs ...)
+  go to ur github and target a specific tag u wanna add release to, and click on (...) then new release, after that u can write informations.
+  delete releases FIRST manually in github, after that u can dremove the tag that's linked with the DELETED RELEASE.
+  git tag -d <tag name u wanna delete> (delete a tag in the local repo)
+  git push origin --delete <tag name> (delete tag in the remote repo) {DELETE THE TAG AND ITS RELEASE AT ONCE BY FORCE}
+______________________
+(if u wanna invite someone to work with u in a project go to settings > collaborators > write its name in the search and click on it so they will recieve ur invitaion)
