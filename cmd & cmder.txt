@@ -1,0 +1,42 @@
+interprener < terminal < shell < powershell
+interprener : translate ur commands to the machin language
+terminal : an input/output envirement to give commands and get results
+cmd (shell) : windows default shell, it's useful put not that much 
+(cmder is shell but much more better cuz it includes some commands from linux and mac as well)
+power shell : something much powerfull than shell it's also a window default shell 
+# cmd :
+color -- : first - for background color & the secound - is for the tect color (color 02)
+color help (to get all color patterns)
+title <new title> (rename ur cmd title)
+explorer . : to open th folder u are now in a new window
+cls : to clear eveythinh u have written in that cmd
+# cmder :
+<command u don't understand> --help (get many command lines)
+cd <name of directoty> (cd abbrv of change directory) 
+cd .. (to get back to the parent folder)
+cd \ (get back to the root or the main path)
+(u can just type cd and the first unique letters of a folder then press tab so it will continue writting it automaticlly)
+mkdir <new folder> (create new folder)
+cd <folder name\> (to open that folder)
+ls (see what files are in that folder)
+dir (see files + some informations)
+mkdir C:/<new directory> (u can create a new folder anywhere without leaving ur path by providing its full path)
+mv <folder u wanna move> <folder u wanna move to> (if u provide a name that doesn't exist it will just rename the first folder)
+mv <folder u wanna move> ..\ (move ur folder out to the parent folder)
+rename<old name> <new name>
+move <folder u wanna move> <parent folder u wanna move into>
+cp -r <folder u wanna copy its files> <the folder u wanna paste them in>
+rm -r <file or folde u wanna remove>
+echo "hello world" (echo like print(""))
+echo "message" > <file u wanna write the message in> 
+(create a file with written content, if the file already contains content it will overwrite on it)
+echo "message" >> <filename> (>> means it won't overwrite but just add new content)
+cat <file> (to see a file's content) (cat * : to show everyting)
+cat <file that wanna copy its content> <file u wanna paste copied content> (cat from.txt box.txt)
+cat <file1> >> <file2> (copy from file1 to file2 without overwriting just add)
+ls (to see files in the folder u are in)
+greb "word name u are looking for" (u will search just in the folder's files u are in)
+grep "what u are looking for" -r (look at the current directory and its folders deeper and deeper)
+greb "what u are looking for" -r -l (to see files that icludes the word u are looking for, -l for list)
+greb "what u are looking for"  <path u want> (greb "text-align" C:/Users/Dell/Desktop/folder)
+exit (to close ut cmder window)
